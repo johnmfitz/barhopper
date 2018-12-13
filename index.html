@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Barhopper - A visitors guide to Sydney Road</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,500i,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <section class="container" id="navbar">
+            <div class="logo">
+                <a href="#" class="home-link" ><img src="img/BarHopper.png" alt="Barhopper"></a>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a class="home-link" href="#">Home</a></li>
+                    <li><a class="search-prompt" href="#">Find a pub</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="search-nav container">
+            <h3>
+                Find me a bar that's known for...
+            </h3>
+            <form action="#" method="get">
+                <div class="column">
+                    <h4>Crowd</h4>
+                    <div id="drink-types">
+                        <input type="checkbox" name="alternativeHipsters" id=""><label>Alternative & hipster crowd</label><br>
+                        <input type="checkbox" name="workers" id=""><label>Workers</label><br>
+                        <input type="checkbox" name="families" id=""><label>Families</label><br>
+                        <input type="checkbox" name="students" id=""><label>Students</label><br>
+                        <input type="checkbox" name="olderCrowd" id=""><label>Older Crowd</label><br>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>To Drink</h4>
+                    <div id="drink-types">
+                        <input type="checkbox" name="pubStandards" id=""><label>Pub Standards</label><br>
+                        <input type="checkbox" name="craftBeer" id=""><label>Craft Beer</label><br>
+                        <input type="checkbox" name="cocktails" id=""><label>Cocktails</label><br>
+                        <input type="checkbox" name="wine" id=""><label>Wine</label><br>
+                        <input type="checkbox" name="spirits" id=""><label>Spirits</label><br>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>To Eat</h4>
+                    <div id="food-types">
+                        <input type="checkbox" name="pubGrub" id=""><label>Classic Pub Grub</label><br>
+                        <input type="checkbox" name="somethingFancy" id=""><label>Something Fancy</label><br>
+                        <input type="checkbox" name="veganOptions" id=""><label>Vegan Options</label><br>
+                        <input type="checkbox" name="worldFood" id=""><label>World Food</label><br>
+                        <input type="checkbox" name="otherFood" id=""><label>Other Food</label><br>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>Entertainment</h4>
+                    <div id="entertainment-types">
+                        <input type="checkbox" name="liveMusic" id=""><label>Live Music</label><br>
+                        <input type="checkbox" name="sports" id=""><label>Sports</label><br>
+                        <input type="checkbox" name="gamingBetting" id=""><label>Gaming/Betting</label><br>
+                        <input type="checkbox" name="djs" id=""><label>DJ's</label><br>
+                        <input type="checkbox" name="otherEnt" id=""><label>Other Entertainment</label><br>     
+                    </div>
+                </div>
+                <div class="column-end">
+                    <input type="submit" id="form-search" value="Filter & Search">
+                </div>
+            </form>
+        </section>
+    </header>
+    <div class="spacer"></div>
+    <main>
+        <section class="home container">
+            <article class="welcome-text">
+                <img class="body-img" src="img/Home_Welcome_Text.png" alt="Welcome to Barhopper">
+                <h2>A visitors guide to Sydney Road</h2>
+                <p>Star ratings are flawed. Who cares if someone <i>"experienced the worst customer service of their life"</i> or <i>"got kicked out for nuffin"</i>?</p>
+                <p>You only care if the venue is right for you. What sort of drinks do they have? What is the crowd like? What sort of entertainment do they provide? How about a meal? That's where Barhopper comes in.</p>
+                <p>Barhopper lets find the things love in a night out. Currently available for Sydney Road, Brunswick & Coburg.</p>
+                <a class="search-prompt" href="#">Find a bar!</a>
+            </article>
+            <article class="welcome-image">
+                <img src="img/BH_Welcome.png" alt="Barhopper">
+            </article>
+        </section>
+        <section class="search">
+            <aside class="results-bar">
+                <div class="results-bar-list"></div>
+                <a href="#" class="search-prompt" id="search-again">No good? Search again!</a>
+            </aside>
+            <section class="details">
+                <div class="search-no-selection">
+                    <img class="body-img" src="img/Search-Results.png" alt="Pick a bar">
+                </div>
+                <div class="pub-info individual-details hide">
+                    <h1 class="info-name"></h1>
+                    <div class="info-address">
+                        <span class="icon-spacer"><i class="fas fa-map-marker-alt"></i></span> 
+                        <div class="barAddressHolder"><Address></Address></div>
+                    </div>
+                    <div class="info-website">
+                        <span class="icon-spacer"><i class="fas fa-laptop"></i></span> 
+                        <div class="barWebsiteHolder"></div>
+                    </div>
+                    <div class="info-phone">
+                        <span class="icon-spacer"><i class="fas fa-phone"></i></span> 
+                        <div class="barPhoneHolder"></div>
+                    </div>
+                    <hr>
+                    <div class="info-crowd">
+                        <span class="icon-spacer"><i class="fas fa-users"></i></span> 
+                        <ul class="indBarUL barCrowdHolder"></ul>
+                    </div>
+                    <div class="info-drink">
+                        <span class="icon-spacer"><i class="fas fa-glass-martini"></i></span> 
+                        <ul class="indBarUL barDrinksHolder"></ul>
+                    </div>
+                    <div class="info-eat">
+                        <span class="icon-spacer"><i class="fas fa-utensils"></i></span> 
+                        <ul class="indBarUL barFoodHolder"></ul>
+                    </div>
+                    <div class="info-entertainment">
+                        <span class="icon-spacer"><i class="fas fa-drum"></i></span> 
+                        <ul class="indBarUL barEntertainmentHolder"></ul>
+                    </div>
+                    <hr>
+                </div>
+                <div class="pub-map individual-details hide"></div>
+            </section>
+        </section>
+    </main>
+    <footer class="container">
+        <p>Copyright &COPY; 2018. </p>
+    </footer>
+    <!-- JQUERY -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
